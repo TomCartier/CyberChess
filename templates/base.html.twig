@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}CyberChess
+			{% endblock %}
+		</title>
+		<link
+		rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>♜</text></svg>">
+		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+		<link rel="stylesheet" href="../scss/normalizeCSS.css">
+		<link rel="stylesheet" href="../scss/style.css">
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</head>
+	<header class="header">
+		<nav class="header--nav">
+			<a href=""><img class="header--nav__logo" src="../images/logo.png" alt=""></a>
+			<ul class="header--nav__items">
+				<li class="header--nav__item">
+					<a href="{{ path ('app_home') }}">À propos</a>
+				</li>
+				<li>
+					<a href="{{ path ('app_product') }}">Notre produit</a>
+				</li>
+				<li>
+					<a href="#">Nous contacter</a>
+				</li>
+			</ul>
+			<div class="header--nav__icons">
+				<a href="{{ path ('app_profil') }}"><img class="header--nav__icon" src="../images/profil.png" alt=""></a>
+				<a href="#"><img id="panierIcon" class="header--nav__icon" src="../images/panier.png" alt=""></a>
+			</div>
+		</nav>
+	</header>
+	<body>
+		{% block body %}{% endblock %}
+	</body>
 </html>

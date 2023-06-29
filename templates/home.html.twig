@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<section class="hero">
+		<div class="hero--title">
+			<h1 class="hero--title__principal">CyberChess</h1>
+			<h2 class="hero--title__baseline">L'alliage entre le traditionnel et la technologie</h2>
+		</div>
+		<div class="hero--button__container">
+			<a class="hero--button" href="">Découvrir maintenant</a>
+		</div>
+	</section>
+
+	<section class="infos" id="apropos">
+		<div class="infos--cyberchess">
+			<h2 class="infos--cyberchess__title">CyberChess</h2>
+			<p class="infos--cyberchess__texte">Il combine l'aspect classique d'un plateau d'échecs avec des fonctionnalités avancées et modernes.</p>
+		</div>
+		<div class="infos--grid">
+			<div class="infos--grid__element">
+				<h3 class="infos--grid__title">Un système robotisé</h3>
+				<p>Il permet aux pièces de se déplacer toutes seule. L’avantage de se produit est qu’il permet de pouvoir jouer contre n’importe quelle adversaire qu’il soit en face de vous ou à l’autre bout du monde !</p>
+			</div>
+			<div class="infos--grid__image">
+				<picture><img src="../images/robot.png" alt=""></picture>
+			</div>
+			<div class="infos--grid__image">
+				<picture><img src="../images/ia.png" alt=""></picture>
+			</div>
+			<div class="infos--grid__element">
+				<h3 class="infos--grid__title">Une IA intégrée</h3>
+				<p>Doté d’une intelligence artificiel CyberChess permet également de pouvoir jouer et s’entraîner seul contre l’IA. Adaptative vous pouvez choisir la diffultée parmit de très nombreux niveaux.</p>
+			</div>
+			<div class="infos--grid__element">
+				<h3 class="infos--grid__title">Des dales lumineuses</h3>
+				<p>Ce plateau est composé de dales lumineuse ce qui permet aux joueurs d’avoir des indications sur les déplacements de pièces une aide précieuse notament pour les novices.</p>
+			</div>
+			<div class="infos--grid__image">
+				<picture><img src="../images/lumiere.png" alt=""></picture>
+			</div>
+		</div>
+		<div class="infos--app">
+			<h2 class="infos--app__title">Notre application mobile</h2>
+			<div class="infos--app--container">
+				<p class="infos--app--container__texte">Connectez-vous à notre application mobile pour profiter de l’expérience au maximum. Choisissez le mode de jeu souhaité, seule contre l’IA, le mode entraînement, défier d’autres joueurs qu’il soit avec le Cyberchess ou sur les plus grand site de jeu d’échecs !</p>
+				<picture class="infos--app--container__img"><img src="../images/qrcode.png" alt=""></picture>
+			</div>
+		</div>
+		<a class="infos--button" href="{{ path ('app_product') }}">Acheter</a>
+	</section>
+
+{% endblock %}

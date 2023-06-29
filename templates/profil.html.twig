@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<section class="profil">
+		<div class="profil--infos">
+			<picture><img src="../images/pp.png" alt=""></picture>
+			<div class="profil--infos__description">
+				<h3>TommyChulos</h3>
+				<h3>Tom Cartier</h3>
+				<div class="profil--infos__rank">
+					<picture class="profil--infos__icon"><img src="../images/queen.png" alt="">
+					</picture>
+					<h3 class="profil--infos__rank__title">Rank GOLD</h3>
+				</div>
+			</div>
+		</div>
+		<div class="profil--stats">
+			<h1>Mes Statistiques</h1>
+			<div class="profil--stats__grid">
+				<div class="profil--stats__grid__element">
+					<h2>Temps de jeu</h2>
+					<span>204 heures</span>
+				</div>
+				<div class="profil--stats__grid__element">
+					<h2>Parties jouées</h2>
+					<span>100 parties</span>
+				</div>
+				<div class="profil--stats__grid__element">
+					<h2>Parties gagnées</h2>
+					<span>67 parties</span>
+				</div>
+				<div class="profil--stats__grid__element">
+					<h2>Niveau de difficulté max</h2>
+					<span>28ème niveau</span>
+				</div>
+				<div class="profil--stats__grid__element">
+					<h2>Rank max</h2>
+					<span>GOLD</span>
+				</div>
+				<div class="profil--stats__grid__element">
+					<h2>Temps moyen de réflexion</h2>
+					<span>2 min 04 sec</span>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

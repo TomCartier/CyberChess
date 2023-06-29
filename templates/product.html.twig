@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<section class="product">
+		<div class="product--fiche">
+			<div class="product--fiche--container">
+				<picture class="product--fiche--container__img"><img src="../images/plateau.png" alt=""></picture>
+				<div class="product--fiche--container__fiche">
+					<div class="product--fiche--container__fiche__prix">
+						<h3>CyberChess</h3>
+						<span>199 €</span>
+					</div>
+
+					<div class="product--fiche--container__fiche__contenu">
+						<h4>Contenu du coffret :</h4>
+						<ul>
+							<li>le plateau</li>
+							<li>2 lot de 16 pions</li>
+							<li>le câble d'alimentation</li>
+							<li>Un accès illimité à l’app</li>
+						</ul>
+					</div>
+					<div class="product--fiche--container__quantite">
+						<div class="product--fiche--container__quantite__selecteur">
+							<div class="product--fiche--container__quantite__selecteur__chiffre" id="quantite">
+								1
+							</div>
+							<span>
+								<div id="plus"><img class="product--fiche--container__quantite__selecteur__img" src=" ../images/haut.png" alt=""></div>
+								<div id="moins"><img class="product--fiche--container__quantite__selecteur__img" src="../images/bas.png" alt=""></div>
+							</span>
+						</div>
+						<div>
+							<a id="addButton" class="product--fiche--container__quantite__btn" href="">Acheter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="product--fiche__reassure">
+				<span>Paiement 100% sécurisé</span>
+				<span>Livraison offerte</span>
+				<span>Retour sous 14 j</span>
+			</div>
+		</div>
+		<div class="product--description">
+			<div class="product--description__container">
+				<h1 class="product--description__container__title">CyberChess</h1>
+				<p class="product--description__container__texte">CyberChess est un tableau d’échec connectée doté d’une intelligence artificiel et d’un système robotisé qui permet aux pièces de se déplacer toutes seule. L’avantage de se produit est qu’il permet de pouvoir jouer contre n’importe quelle adversaire qu’il soit en face de vous ou à l’autre bout du monde. Ce plateau propose également des aides et des entraînements grace à ses dales lumineuses. Ce plateau est également connecté à une application ce qui permet donc de choisir le mode voulu et de se connecter à toute les application d’échec en ligne ce qui permet au lieu de jouer sur un ordinateur ou un téléphone de jouer sur une vrai plateau. CyberChess intègre également des commandes vocals ce qui permet au joueur à mobilité réduite de profité pleinement de cette expérience !</p>
+			</div>
+			<div class="product--description__app">
+				<div class="product--description__app__download">
+					<h3 class="product--description__app__download__title">Télécharger notre application mobile</h3>
+					<div class="product--description__app__download__link">
+						<picture><img src="../images/apple.png" alt=""></picture>
+						<picture><img src="../images/google.png" alt=""></picture>
+					</div>
+				</div>
+				<div class="product--description__app__qrcode">
+					<picture><img src="../images/qrcode.png" alt=""></picture>
+				</div>
+			</div>
+		</div>
+
+		<div class="product--modal" id="panierModal">
+			<h3 class="product--modal__title">Votre panier</h3>
+			<span class="product--modal__separator"></span>
+			<div class="product--modal__container">
+				<picture><img class="product--modal__img" src="../images/plateau.png" alt=""></picture>
+				<div class="product--modal__info">
+					<h4>CyberChess</h4>
+					<div class="product--modal__container__quantite">
+						<div class="product--modal__container__selecteur">
+							<div class="" id="quantitePanier">
+								1
+							</div>
+							<span>
+								<div id="plusPanier"><img class="" src=" ../images/haut.png" alt=""></div>
+								<div id="moinsPanier"><img class="" src="../images/bas.png" alt=""></div>
+							</span>
+						</div>
+						<span>X  199 €</span>
+					</div>
+				</div>
+			</div>
+			<span class="product--modal__separator"></span>
+			<div class="product--modal__total">
+				<h4 class="product--modal__totalTitle">Total TTC</h4>
+				<div class="product--modal__totalPrice">
+					<span id="totalPrice">199</span>
+					€</div>
+			</div>
+			<div>
+				<a class="product--modal__btn" href="">Commander</a>
+			</div>
+		</div>
+
+	</section>
+	<script src="{{ asset('../js/panier.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'header';
+@import 'home';
+@import 'product';
+@import 'profil';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html{
+    font-family: 'Montserrat';
+    color: $color-primary;
+    background: $bg-primary;
+}
+
+a{
+    text-decoration: none;
+    color: $color-primary;
+}
+
+li {
+    list-style: none;
+}
+
+ul{
+    padding: 0;
+}
+
+h1, h2, h3{
+    margin: 0;
+}
